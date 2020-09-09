@@ -15,6 +15,7 @@
 \usepackage{color, colortbl}
 \definecolor{light-blue}{rgb}{0.8,0.85,1}
 \definecolor{light-green}{rgb}{0.9,1,0.8}
+\definecolor{light-yellow}{RGB}{255,248,220}
 
 
 %\usepackage{fancyhdr}		% колонтитулы
@@ -69,3 +70,9 @@
 	\vspace{3ex}~\\
 }
 
+\newcommand{\Reflection}[1]{\refstepcounter{reflection}
+	\vspace{4ex}~\\
+	\noindent\colorbox{light-yellow}{{\Large\textit{Пища для размышлений}}}\nopagebreak\vspace{2ex}~\\
+	\par #1
+	\vspace{3ex}~\\
+}
