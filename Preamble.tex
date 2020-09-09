@@ -12,6 +12,10 @@
 
 \usepackage{tabularx}
 
+\usepackage{color, colortbl}
+\definecolor{light-blue}{rgb}{0.8,0.85,1}
+\definecolor{light-green}{rgb}{0.9,1,0.8}
+
 
 %\usepackage{fancyhdr}		% колонтитулы
 
@@ -32,3 +36,36 @@
 
 
 \usepackage{tikz}
+
+
+
+%%% Счетчики %%%
+\newcounter{exercises}
+\setcounter{exercises}{0}
+
+\newcounter{informalpractices}
+\setcounter{informalpractices}{0}
+
+\newcounter{meditations}
+\setcounter{meditations}{0}
+
+\newcounter{reflection}
+\setcounter{reflection}{0}
+
+
+
+%%% Команды %%%
+\newcommand{\Exercises}[1]{\refstepcounter{exercises}
+	\vspace{4ex}~\\
+	\noindent\colorbox{light-blue}{{\Large\textit{Упражнение~\arabic{exercises}}}}\nopagebreak\vspace{2ex}~\\
+	{\Large\textbf{#1}}\addcontentsline{toc}{section}{\textit{Упр.\,\arabic{exercises}}\quad#1}
+	\vspace{3ex}~\\
+}
+
+\newcommand{\InformalPractices}[1]{\refstepcounter{informalpractices}
+	\vspace{4ex}~\\
+	\noindent\colorbox{light-green}{{\Large\textit{Неформальная практика}}}\nopagebreak\vspace{2ex}~\\
+	{\Large\textbf{#1}}\addcontentsline{toc}{section}{\textit{Неформальная практика}\quad#1}
+	\vspace{3ex}~\\
+}
+
