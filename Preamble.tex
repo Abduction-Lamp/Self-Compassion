@@ -7,20 +7,31 @@
 
 \usepackage{indentfirst}				% красная строка для первого параграфа
 
+
+%%% Математика и символы %%%
 \usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools} 	% AMS
 \usepackage{icomma} 										% "Умная" запятая
+\usepackage{fdsymbol}										% Символ сердечко
 
-\usepackage{tabularx}
 
+%%% Таблицы %%%
+\usepackage{tabularx}		
+\usepackage{makecell}		% Выравнивает ячейки по значениям l c r
+
+
+%%% Работа с цветом %%%
 \usepackage{color, colortbl}
+%%% Мои цвета %%%
 \definecolor{light-blue}{rgb}{0.8,0.85,1}
 \definecolor{light-green}{rgb}{0.9,1,0.8}
 \definecolor{light-yellow}{RGB}{255,248,220}
 
 
-%\usepackage{fancyhdr}		% колонтитулы
+%%% Колонтитулы %%%
+%\usepackage{fancyhdr}
 
 
+%%% Гиперссылки %%%
 \usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor}
 \usepackage{hyperref}
 \hypersetup{
@@ -31,12 +42,13 @@
 	urlcolor = cyan		% URL
 }
 
-%% Шрифты
+
+%%% Шрифты %%%
 %\usepackage{euscript}	% Шрифт Евклид
 %\usepackage{mathrsfs} 	% Красивый матшрифт
-\usepackage{fdsymbol}
 
 
+%%% Графика %%%
 \usepackage{tikz}
 
 
@@ -78,6 +90,10 @@
 	\vspace{3ex}~\\
 }
 
-
+% Сердечко 
 \newcommand{\itemheart}{\item[$\heartsuit$]}
+
+
+%%% Переопределение команд %%%
+\renewcommand{\thempfootnote}{\arabic{mpfootnote}}
 
