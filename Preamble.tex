@@ -8,12 +8,21 @@
 \usepackage{indentfirst}				% красная строка для первого параграфа
 
 
+%%% Поля документа %%%
+\usepackage{geometry}
+\geometry{top=35mm}
+\geometry{bottom=35mm}
+\geometry{left=35mm}
+\geometry{right=25mm}
+
+
+
 %%% Математика и символы %%%
-\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools} 	% AMS
-\usepackage{icomma} 										% "Умная" запятая
-\usepackage{fdsymbol}										% Символ сердечко
+%\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools} % AMS
+%\usepackage{icomma} 										% "Умная" запятая
+\usepackage{fdsymbol}										% Сердечко
 \usepackage{marvosym}										% Инь и Янь
-%\usepackage{stix}											% Стрелочки
+%\usepackage{stix}											% Стрелочки, ромбик
 
 
 %%% Таблицы %%%
@@ -26,9 +35,9 @@
 \usepackage{color, colortbl}
 %%% Мои цвета %%%
 \definecolor{light-blue}{rgb}{0.8,0.85,1}
-\definecolor{light-green}{rgb}{0.9,1,0.8}
-\definecolor{light-yellow}{RGB}{255,248,220}
-
+\definecolor{light-green}{RGB}{199,255,186}
+\definecolor{light-yellow}{RGB}{246,255,170}
+\definecolor{light-ping}{RGB}{235,199,223}
 
 %%% Колонтитулы %%%
 %\usepackage{fancyhdr}
@@ -55,7 +64,6 @@
 \usepackage{tikz}
 
 
-
 %%% Счетчики %%%
 \newcounter{exercises}
 \setcounter{exercises}{0}
@@ -73,16 +81,22 @@
 
 %%% Команды %%%
 \newcommand{\Exercises}[1]{\refstepcounter{exercises}
-	\vspace{4ex}~\\
 	\noindent\colorbox{light-blue}{{\Large\textit{Упражнение~\arabic{exercises}}}}\nopagebreak\vspace{2ex}~\\
 	{\Large\textbf{#1}}\addcontentsline{toc}{section}{\textit{Упр.\,\arabic{exercises}}\quad#1}
-	\vspace{3ex}~\\
+	\vspace{1ex}~\\
 }
 
 \newcommand{\InformalPractices}[1]{\refstepcounter{informalpractices}
 	\vspace{4ex}~\\
 	\noindent\colorbox{light-green}{{\Large\textit{Неформальная практика}}}\nopagebreak\vspace{2ex}~\\
 	{\Large\textbf{#1}}\addcontentsline{toc}{section}{\textit{Неформальная практика}\quad#1}
+	\vspace{3ex}~\\
+}
+
+\newcommand{\Meditation}[1]{\refstepcounter{meditations}
+	\vspace{4ex}~\\
+	\noindent\colorbox{light-ping}{{\Large\textit{Медитация}}}\nopagebreak\vspace{2ex}~\\
+	{\Large\textbf{#1}}\addcontentsline{toc}{section}{\textit{Медитация}\quad#1}
 	\vspace{3ex}~\\
 }
 
@@ -98,6 +112,15 @@
 \newcommand{\itemheart}{\item[\textcolor{red}{$\heartsuit$}]}
 % Инь и Янь в списке
 \newcommand{\itemyinyang}{\item[\Yinyang]}
+% Ромбик
+\newcommand{\itemdiamondsuit}{\item[$\diamondsuit$]}
+% Звездочка
+\newcommand{\itemast}{\item[$\ast$]}
+% Рука с корондашом
+\newcommand{\itemWritingHand}{\item[\WritingHand]}
+
+
+
 
 
 %%% Переопределение команд %%%
