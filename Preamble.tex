@@ -8,6 +8,15 @@
 \usepackage{indentfirst}				% красная строка для первого параграфа
 
 
+%%% Поля документа %%%
+\usepackage{geometry}
+\geometry{top=35mm}
+\geometry{bottom=35mm}
+\geometry{left=35mm}
+\geometry{right=25mm}
+
+
+
 %%% Математика и символы %%%
 %\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools} % AMS
 %\usepackage{icomma} 										% "Умная" запятая
@@ -72,7 +81,6 @@
 
 %%% Команды %%%
 \newcommand{\Exercises}[1]{\refstepcounter{exercises}
-	\vspace{4ex}~\\
 	\noindent\colorbox{light-blue}{{\Large\textit{Упражнение~\arabic{exercises}}}}\nopagebreak\vspace{2ex}~\\
 	{\Large\textbf{#1}}\addcontentsline{toc}{section}{\textit{Упр.\,\arabic{exercises}}\quad#1}
 	\vspace{1ex}~\\
