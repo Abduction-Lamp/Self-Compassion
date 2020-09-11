@@ -9,11 +9,11 @@
 
 
 %%% Математика и символы %%%
-\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools} 	% AMS
-\usepackage{icomma} 										% "Умная" запятая
-\usepackage{fdsymbol}										% Символ сердечко
+%\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools} % AMS
+%\usepackage{icomma} 										% "Умная" запятая
+\usepackage{fdsymbol}										% Сердечко
 \usepackage{marvosym}										% Инь и Янь
-%\usepackage{stix}											% Стрелочки
+%\usepackage{stix}											% Стрелочки, ромбик
 
 
 %%% Таблицы %%%
@@ -55,7 +55,6 @@
 \usepackage{tikz}
 
 
-
 %%% Счетчики %%%
 \newcounter{exercises}
 \setcounter{exercises}{0}
@@ -76,7 +75,7 @@
 	\vspace{4ex}~\\
 	\noindent\colorbox{light-blue}{{\Large\textit{Упражнение~\arabic{exercises}}}}\nopagebreak\vspace{2ex}~\\
 	{\Large\textbf{#1}}\addcontentsline{toc}{section}{\textit{Упр.\,\arabic{exercises}}\quad#1}
-	\vspace{3ex}~\\
+	\vspace{1ex}~\\
 }
 
 \newcommand{\InformalPractices}[1]{\refstepcounter{informalpractices}
@@ -98,6 +97,15 @@
 \newcommand{\itemheart}{\item[\textcolor{red}{$\heartsuit$}]}
 % Инь и Янь в списке
 \newcommand{\itemyinyang}{\item[\Yinyang]}
+% Ромбик
+\newcommand{\itemdiamondsuit}{\item[$\diamondsuit$]}
+% Звездочка
+\newcommand{\itemast}{\item[$\ast$]}
+% Рука с корондашом
+\newcommand{\itemWritingHand}{\item[\WritingHand]}
+
+
+
 
 
 %%% Переопределение команд %%%
